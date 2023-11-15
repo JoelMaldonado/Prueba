@@ -15,6 +15,7 @@ dotenv.config()
 
 const app = express();
 
+const ip = process.env.IP = 0;
 const port = process.env.PORT || 3000
 
 app.use(cors())
@@ -33,8 +34,8 @@ async function startServer() {
     try {
         await db.connect();
         console.log('Conexión a la base de datos exitosa');
-        app.listen(port, () => {
-            console.log(`Servidor Express escuchando en el puerto ${port}`);
+        app.listen(port, ip, () => {
+            console.log(`Servidor Express escuchando en ${ip} ${port}`);
         });
     } catch (error) {
         console.error('Error al conectar a la base de datos:', error);
