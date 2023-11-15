@@ -1,25 +1,21 @@
 {
-  "name": "prueba",
+  "name": "olympuscourierbackend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"node src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JoelMaldonado/Prueba.git"
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JoelMaldonado/Prueba/issues"
-  },
-  "homepage": "https://github.com/JoelMaldonado/Prueba#readme",
   "dependencies": {
+    "axios": "^1.6.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql2": "^3.6.3",
+    "nodemon": "^3.0.1"
   }
 }
