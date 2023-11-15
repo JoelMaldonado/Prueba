@@ -14,7 +14,7 @@ const getAllDestinos = async (req, res) => {
 const insertDestino = async (req, res) => {
     try {
         const { nombre } = req.body;
-        const result = await db.query('INSERT INTO Destinos (nombre) VALUES (?)', [nombre]);
+        const result = await db.query('INSERT INTO destinos (nombre) VALUES (?)', [nombre]);
 
         if (result.affectedRows === 1) {
             res.json({ message: 'Destino insertado correctamente' });

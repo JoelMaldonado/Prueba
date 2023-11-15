@@ -21,6 +21,9 @@ const port = process.env.PORT || 3000
 app.use(cors())
 app.use(express.json())
 
+app.get("/ping", (req, res) => {
+    res.send("Pong");
+});
 
 app.use('/api', destinoRoutes);
 app.use('/api', clienteRoutes);
